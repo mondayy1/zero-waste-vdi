@@ -1,0 +1,27 @@
+[global_tags]
+  host = "VM_NAME_HERE"
+
+[agent]
+  interval = "10s"
+  round_interval = true
+  metric_batch_size = 1000
+  metric_buffer_limit = 10000
+  flush_interval = "10s"
+  omit_hostname = true
+
+[[outputs.influxdb_v2]]
+  urls = ["http://INFLUX_HOST:8086"]
+  token = "INFLUX_TOKEN_HERE"
+  organization = "zero-waste"
+  bucket = "telegraf"
+
+[[inputs.cpu]]
+  percpu = true
+  totalcpu = true
+
+[[inputs.mem]]
+
+[[inputs.net]]
+
+[[inputs.disk]]
+  ignore_fs = ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
