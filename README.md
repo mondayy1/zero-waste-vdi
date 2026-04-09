@@ -134,19 +134,6 @@ python3 daemon.py
 
 ---
 
-## 📸 스크린샷
-
-### Discord VM 요청 및 생성
-![Discord](docs/discord.png)
-
-### Grafana 모니터링 대시보드
-![Grafana](docs/grafana.png)
-
-### 유휴 VM 자동 회수
-![Daemon](docs/daemon.png)
-
----
-
 ## ⚠️ 한계 및 개선 예정
 
 - **IP 자동 조회**: 현재 VMware 환경 제약으로 미구현. 베어메탈 환경에서는 QEMU Guest Agent로 즉시 IP 조회 가능
